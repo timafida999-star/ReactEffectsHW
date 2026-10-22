@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+.badge {
+  flex-shrink: 0;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+
+  &--on {
+    background: rgba($color-success, 0.15);
+    color: #2f7a2f;
+  }
+
+  &--off {
+    background: $color-border;
+    color: $color-muted;
+  }
+
+  &--pending {
+    background: rgba($color-warning, 0.2);
+    color: #8a5d00;
+  }
+}

@@ -1,0 +1,59 @@
+@use '../abstracts' as *;
+
+.header {
+  @include flex(row, center, space-between, 16px);
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding: 18px 22px;
+  border-radius: $radius-big;
+  background: $color-dark;
+  color: $color-white;
+
+  &__actions {
+    @include flex(row, center, flex-end, 12px);
+    flex-wrap: wrap;
+
+    @include screen($phone) {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__network {
+    @include flex(row, center, flex-start, 8px);
+    font-size: 13px;
+    color: $color-dark-text;
+
+    select {
+      @include input;
+      width: auto;
+      background: $color-dark-light;
+      border-color: $color-dark-light;
+      color: $color-white;
+    }
+  }
+}
+
+.brand {
+  @include flex(row, center, flex-start, 14px);
+
+  &__logo {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: $color-accent;
+    font-size: 26px;
+
+    @include flex(row, center, center);
+  }
+
+  &__name {
+    font-size: 24px;
+  }
+
+  &__tagline {
+    font-size: 13px;
+    color: $color-dark-text;
+  }
+}

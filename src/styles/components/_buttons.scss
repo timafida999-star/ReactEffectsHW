@@ -1,0 +1,62 @@
+@use '../abstracts' as *;
+
+.btn {
+  padding: 9px 16px;
+  border: 2px solid transparent;
+  border-radius: $radius-small;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background 0.2s, color 0.2s;
+
+  @include flex(row, center, center, 6px);
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &--accent {
+    @include button-color($color-accent, $color-dark, $color-accent-hover);
+  }
+
+  &--dark {
+    @include button-color($color-dark, $color-white, $color-dark-light);
+  }
+
+  &--outline {
+    @include button-color(transparent, $color-text, $color-bg);
+    border-color: $color-border;
+
+    &.is-active,
+    &.is-active:hover:enabled {
+      background: $color-dark;
+      border-color: $color-dark;
+      color: $color-white;
+    }
+  }
+
+  &--danger {
+    @include button-color(transparent, $color-danger, rgba($color-danger, 0.08));
+    border-color: rgba($color-danger, 0.4);
+  }
+
+  &--full {
+    width: 100%;
+  }
+}
+
+.icon-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: $color-bg;
+  color: $color-muted;
+  font-size: 18px;
+  line-height: 1;
+
+  &:hover:enabled {
+    background: rgba($color-danger, 0.12);
+    color: $color-danger;
+  }
+}

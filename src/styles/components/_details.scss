@@ -1,0 +1,100 @@
+@use '../abstracts' as *;
+
+.details-panel {
+  position: sticky;
+  top: 20px;
+
+  @include screen($tablet) {
+    position: static;
+  }
+
+  &__head {
+    @include flex(row, center, space-between);
+  }
+}
+
+.details {
+  @include flex(column, stretch, flex-start, 16px);
+
+  &__top {
+    @include flex(row, center, flex-start, 16px);
+  }
+
+  &__title {
+    @include flex(column, flex-start, flex-start, 4px);
+
+    h2 {
+      font-size: 26px;
+    }
+  }
+
+  &__id {
+    font-size: 13px;
+    color: $color-muted;
+  }
+
+  &__description {
+    padding: 12px 14px;
+    border-left: 3px solid $color-accent;
+    border-radius: $radius-small;
+    background: $color-bg;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    @include screen($phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__field {
+    padding: 10px 12px;
+    border: 1px solid $color-border;
+    border-radius: $radius-small;
+
+    dt {
+      font-size: 12px;
+      color: $color-muted;
+    }
+
+    dd {
+      font-weight: 600;
+    }
+  }
+
+  &__error {
+    padding: 10px 12px;
+    border-radius: $radius-small;
+    background: rgba($color-danger, 0.1);
+    color: $color-danger;
+    font-size: 14px;
+  }
+
+  &__actions {
+    @include flex(row, center, flex-start, 10px);
+    flex-wrap: wrap;
+
+    .btn--dark {
+      flex: 1;
+      min-width: 170px;
+    }
+  }
+}
+
+.danger {
+  @include flex(row, center, flex-start, 4px);
+
+  &__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $color-border;
+
+    &.is-on {
+      background: $color-danger;
+    }
+  }
+}

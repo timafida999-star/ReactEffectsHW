@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+
+.toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 20;
+  max-width: 380px;
+  padding: 12px 14px 12px 16px;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  color: $color-white;
+  font-size: 14px;
+
+  @include flex(row, flex-start, space-between, 12px);
+
+  &--success {
+    background: $color-dark;
+  }
+
+  &--error {
+    background: $color-danger;
+  }
+
+  &__close {
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  @include screen($phone) {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+}

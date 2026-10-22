@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $color-bg;
+  color: $color-text;
+  font-family: $font-main;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}

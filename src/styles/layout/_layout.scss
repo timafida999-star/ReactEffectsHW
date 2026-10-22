@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+
+.app {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 24px 24px 40px;
+
+  @include screen($phone) {
+    padding: 16px 12px 32px;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+  align-items: start;
+
+  @include screen($tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  @include card(20px);
+  @include flex(column, stretch, flex-start, 14px);
+
+  @include screen($phone) {
+    padding: 16px;
+  }
+}
+
+.credits {
+  margin-top: 24px;
+  font-size: 12px;
+  color: $color-muted;
+  text-align: center;
+}

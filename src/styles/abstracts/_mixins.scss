@@ -1,0 +1,50 @@
+@use 'variables' as *;
+
+@mixin flex($direction: row, $align: center, $justify: flex-start, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin card($padding: 20px) {
+  background: $color-white;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: $padding;
+}
+
+@mixin button-color($background, $text, $hover) {
+  background: $background;
+  color: $text;
+
+  &:hover:enabled {
+    background: $hover;
+  }
+}
+
+@mixin focus-ring {
+  outline: 3px solid rgba($color-accent, 0.7);
+  outline-offset: 1px;
+}
+
+@mixin input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid $color-border;
+  border-radius: $radius-small;
+  background: $color-white;
+  color: $color-text;
+  font-size: 14px;
+
+  &:focus {
+    @include focus-ring;
+  }
+}
+
+@mixin screen($max-width) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}

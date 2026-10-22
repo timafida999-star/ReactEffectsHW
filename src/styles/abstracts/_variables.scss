@@ -1,0 +1,39 @@
+$color-bg: #f1f4ec;
+$color-white: #ffffff;
+$color-text: #233127;
+$color-muted: #66756a;
+$color-border: #dde3d3;
+
+$color-dark: #1e3a2f;
+$color-dark-light: #2a4d3e;
+$color-dark-text: #b5cdbf;
+
+$color-accent: #ff8c42;
+$color-accent-hover: #f2711c;
+
+$color-success: #5bb35b;
+$color-warning: #f2b134;
+$color-danger: #d64545;
+
+$species-colors: (
+  tr: #e76f51,
+  tc: #2a9d8f,
+  vr: #8e6ccb,
+  sg: #c9a227,
+  br: #4a90c2,
+  an: #8d6e63,
+  sp: #3d7ea6,
+);
+
+$font-main: 'Rubik', Arial, sans-serif;
+$font-title: 'Fredoka', 'Rubik', Arial, sans-serif;
+
+$radius-small: 8px;
+$radius: 14px;
+$radius-big: 20px;
+
+$max-width: 1200px;
+$shadow: 0 4px 16px rgba(30, 58, 47, 0.08);
+
+$tablet: 1000px;
+$phone: 600px;

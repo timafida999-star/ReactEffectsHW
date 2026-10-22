@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+h1,
+h2,
+h3 {
+  font-family: $font-title;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.text-muted {
+  color: $color-muted;
+}
