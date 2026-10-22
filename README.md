@@ -3,7 +3,7 @@
 Task 4 — Async React: Effects & API. A dinosaur registry built on the provided
 [fake API](https://github.com/leravanna/fake-api): Promises, random delays, random errors and `localStorage`.
 
-**Live demo:** https://timafida999-star.github.io/REPO-NAME/
+**Live demo:** [https://timafida999-star.github.io/REPO-NAME/](https://timafida999-star.github.io/ReactEffectsHW/)
 
 ## Features
 
